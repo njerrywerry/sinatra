@@ -17,3 +17,12 @@ end
 get '/more/*' do
   params[:splat]
 end
+
+# creating a form to capture user data
+get '/form' do
+  erb :form
+end
+
+post '/form' do
+  "You said '#{params[:message]}'"
+end
